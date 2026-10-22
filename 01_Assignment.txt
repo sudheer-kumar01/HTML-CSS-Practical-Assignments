@@ -1,0 +1,4 @@
+Q1. Write a one-paragraph explanation of what happens between typing a URL and seeing the page.
+• URL- URL is the address of a web resource and when user types it on Browser then behind the screen,
+  The browser  sends a request to the Server. The server processes the request and sends a response for 
+  giving the user then browser processes HTML, CSS, JavaScript to renders the page.

@@ -1,0 +1,8 @@
+Q3. Complete a short terminal-navigation practice sheet.
+• pwd - Use for chacking where we stay in the computer.
+• mkdir - Use for creating folder
+• cd - Use for change path of folder where we want to stay.
+• cd .. - Use for going back from current folder to one over folder.
+• New-Item [file name] -ItemType File - Use for creating file .
+• ls - Use for chacking how many things are available in the current folder.
+• rm - Use for removing file or folder.
