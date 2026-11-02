@@ -1,0 +1,153 @@
+/* ----------------------------------------------------
+   1. DESIGN TOKENS & RESET
+   ---------------------------------------------------- */
+:root {
+    --primary-color: #1e293b;
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --text-dark: #334155;
+    --border-color: #e2e8f0;
+
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: Arial, sans-serif;
+
+    --radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ----------------------------------------------------
+   2. SHARED LAYOUT & CONTAINER
+   ---------------------------------------------------- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* ----------------------------------------------------
+   3. NAVIGATION BAR & HEADER
+   ---------------------------------------------------- */
+header {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: #e0f2fe;
+    color: var(--accent-hover);
+}
+
+/* ----------------------------------------------------
+   4. SECTIONS & FORMS
+   ---------------------------------------------------- */
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 8px;
+}
+
+label {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ----------------------------------------------------
+   5. FOOTER
+   ---------------------------------------------------- */
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}

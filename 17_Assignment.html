@@ -1,0 +1,104 @@
+<!--Q17. Build a job-application style form using every input type covered.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frofessinal Job Application Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+        <p>Please fill out this form to apply for the position of Data Scientist Trainee.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <form action="">
+
+            <!-- 1. Text & Email Inputs -->
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+            <br>
+
+            <!-- 2. Date Input (Date of Birth) -->
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+            <br>
+
+
+            <!-- 3. Radio Buttons (Gender - Single Selection) -->
+
+            <div>
+                <label>Gender:</label> <br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <br>
+
+            <!-- 4. Dropdown List (Experience Level) -->
+            <div>
+                <label for="experience">Experience Level:</label>
+                <select id="experience" required>
+                    <option value="" Select One</option>
+                    <option value="fresher">Fresher (Student)</option>
+                    <option value="junior">Junior (1-2 years)</option>
+                    <option value="senior">Senior (3+ years)</option>
+                </select>
+            </div>
+            <br>
+
+            <!-- 5. Checkboxes (Skills - Multiple Selection) -->
+            <div>
+                <label for="">Programming Skills:</label> <br>
+                <input type="checkbox" id="skilll" value="java">
+                <label for="skilll">Java</label> <br>
+                <input type="checkbox" id="skilll2" value="python">
+                <label for="skilll2">Python</label> <br>
+                <input type="checkbox" id="skiilll3" value="C++"></input>
+                <label for="skilll3">C++</label>
+
+            </div>
+            <br>
+
+            <!-- 6. File Input (Resume Upload) -->
+            <div>
+                <label for="resume">Upload Resume (PDF only):</label>
+                <input type="file" id="resume" accept=".pdf" required>
+            </div>
+            <br>
+
+            <!-- 7. Textarea (Cover Letter) -->
+            <div>
+                <label for="coverLetter">Cover Letter / About Yourself:</label> <br>
+                <textarea name="" id="coverLetter" rows="5" cols="50" placeholder="why you want this job..."></textarea>
+            </div>
+            <br>
+
+            <!-- 8. Submit Button --><!-- 8. Submit Button -->
+            <div>
+                <button type="submit">Summit Application</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

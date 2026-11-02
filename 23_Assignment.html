@@ -1,0 +1,185 @@
+<!--Q23.Restyle the resume page with a proper font pairing and colour palette.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Resume</title>
+    <!-- Google Fonts Pairing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ----------------------------------------------------
+           Design Palette:
+           - Primary Dark:  #1e293b (Slate Blue)
+           - Primary Accent:#0284c7 (Teal / Sky Blue)
+           - Light BG:      #f8fafc
+           - Text Dark:     #334155
+           - Card Border:   #e2e8f0
+           ---------------------------------------------------- */
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1e293b;
+            margin-top: 0;
+        }
+
+        .header-section {
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-section h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #0284c7;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Resume Sections */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1e293b;
+            border-left: 4px solid #0284c7;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Experience & Education Item Styling */
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Skills Pill Layout */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1>Alex Morgan</h1>
+            <p class="subtitle">Frontend Developer & UI Designer</p>
+            <div class="contact-info">
+                <span>alex.morgan@example.com</span> | 
+                <span>+1 (555) 019-2834</span> | 
+                <span>github.com/alexmorgan</span>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="section-title">Summary</h2>
+            <p>Passionate frontend developer with a strong focus on clean code, semantic HTML5, and responsive CSS architectures. Dedicated to building performant and accessible web experiences.</p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Junior Web Developer — Tech Solutions Inc.</span>
+                    <span class="item-date">2024 - Present</span>
+                </div>
+                <p>Developed responsive web interfaces using modern HTML, CSS Grid, and Flexbox. Collaborated with UI designers to implement pixel-perfect user interfaces.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">B.Sc. Computer Science — State University</span>
+                    <span class="item-date">2020 - 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Flexbox & Grid</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>

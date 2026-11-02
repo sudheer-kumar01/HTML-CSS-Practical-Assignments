@@ -1,0 +1,99 @@
+<!--Q28. Fix a supplied page where overflow is breaking the layout.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Overflow Layout</title>
+    <style>
+        /* Global Reset to prevent width calculation overflow */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+        }
+
+        /* ----------------------------------------------------
+           BUG 1 FIX: Unbroken Text/URLs Overflowing Box
+           ---------------------------------------------------- */
+        .text-box {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            
+            /* FIX: Forces long URLs or strings to break into next line */
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        /* ----------------------------------------------------
+           BUG 2 FIX: Large Image Spilling Out of Container
+           ---------------------------------------------------- */
+        .image-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .image-box img {
+            /* FIX: Prevents image from exceeding container width */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* ----------------------------------------------------
+           BUG 3 FIX: Fixed-Width Wide Content (Tables/Code)
+           ---------------------------------------------------- */
+        .code-box {
+            background-color: #0f172a;
+            color: #38bdf8;
+            padding: 15px;
+            border-radius: 6px;
+            
+            /* FIX: Adds internal scrollbar if content is wider than container */
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Fixed Layout Box</h2>
+
+        <!-- Fix 1: Long URL Text -->
+        <div class="text-box">
+            <h3>Long Link Test</h3>
+            <p>Here is an unbroken long URL that used to break the layout: https://www.example.com/very/long/nested/path/to/a/resource/that/causes/horizontal/overflow/issues</p>
+        </div>
+
+        <!-- Fix 2: Responsive Image -->
+        <div class="image-box">
+            <h3>Responsive Image Test</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Sample wide banner">
+        </div>
+
+        <!-- Fix 3: Scrollable Code Snippet -->
+        <div class="code-box">
+            <code>const longVariableWithExtremeLength = functionWhichReturnsDetailedConfigurationDetails();</code>
+        </div>
+    </div>
+
+</body>
+</html>

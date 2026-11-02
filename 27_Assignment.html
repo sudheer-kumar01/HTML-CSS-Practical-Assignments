@@ -1,0 +1,133 @@
+<!--Q27. Create three differently styled card variants using border-radius and backgrounds.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Variants - Border Radius & Backgrounds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ----------------------------------------------------
+           VARIANT 1: Minimalist Flat Card
+           - Slight Border Radius (6px)
+           - Clean Solid Light Background
+           ---------------------------------------------------- */
+        .card-flat {
+            width: 280px;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px; /* Subtle curvature */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-flat h3 {
+            color: #0f172a;
+            margin-top: 0;
+        }
+
+        .card-flat p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* ----------------------------------------------------
+           VARIANT 2: Vibrant Gradient Card
+           - High Border Radius (20px)
+           - Linear Gradient Background
+           ---------------------------------------------------- */
+        .card-gradient {
+            width: 280px;
+            padding: 24px;
+            /* Multi-color gradient background */
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            border-radius: 20px; /* Pronounced rounded corners */
+            color: #ffffff;
+        }
+
+        .card-gradient h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card-gradient p {
+            color: #e0e7ff;
+            font-size: 0.95rem;
+        }
+
+        .btn-light {
+            background: #ffffff;
+            color: #4f46e5;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ----------------------------------------------------
+           VARIANT 3: Dark Elevated Card
+           - Asymmetric / Custom Border Radius
+           - Dark Solid Background + Deep Shadow
+           ---------------------------------------------------- */
+        .card-dark {
+            width: 280px;
+            padding: 24px;
+            background-color: #0f172a;
+            /* Top-left & bottom-right extra rounded */
+            border-radius: 24px 4px 24px 4px;
+            color: #f8fafc;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.4);
+        }
+
+        .card-dark h3 {
+            margin-top: 0;
+            color: #38bdf8;
+        }
+
+        .card-dark p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <!-- Card Variant 1 -->
+        <div class="card-flat">
+            <h3>Flat Minimal</h3>
+            <p>Clean design using solid background color and subtle 6px border-radius.</p>
+        </div>
+
+        <!-- Card Variant 2 -->
+        <div class="card-gradient">
+            <h3>Gradient Dynamic</h3>
+            <p>Uses a 135deg linear gradient with 20px border-radius for modern apps.</p>
+            <button class="btn-light">Explore</button>
+        </div>
+
+        <!-- Card Variant 3 -->
+        <div class="card-dark">
+            <h3>Dark Asymmetric</h3>
+            <p>Features dark background and asymmetric border-radius values (24px 4px).</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

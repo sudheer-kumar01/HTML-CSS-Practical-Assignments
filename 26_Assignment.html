@@ -1,0 +1,58 @@
+<!--Q26. Annotate a screenshot explaining the box model of one of your own elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Annotation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 
+           ----------------------------------------------------
+           CSS BOX MODEL DEMO COMPONENT
+           ----------------------------------------------------
+        */
+        .box-model-demo {
+            /* 1. CONTENT AREA DIMENSIONS */
+            width: 300px;
+            height: 120px;
+            background-color: #bfdbfe; /* Blue = Content */
+
+            /* 2. PADDING AREA (Space inside border) */
+            padding: 25px;
+            
+            /* 3. BORDER AREA (Frame around padding) */
+            border: 8px solid #1e293b;
+
+            /* 4. MARGIN AREA (Space outside element) */
+            margin: 40px;
+
+            /* Box Sizing Calculation */
+            box-sizing: content-box; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Target Element for Box Model Inspection -->
+    <div class="box-model-demo">
+        <p class="content-text">Content Area</p>
+        <small>(Width: 300px | Height: 120px)</small>
+        <img src="" alt="Box Model image of css">
+    </div>
+
+</body>
+</html>

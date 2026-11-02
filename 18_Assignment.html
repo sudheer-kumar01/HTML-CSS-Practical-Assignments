@@ -1,0 +1,100 @@
+<!--Q18.Build an e-commerce-style product size-chart table.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Size Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .size-chart-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        caption {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            text-align: center;
+            padding: 12px 10px;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="size-chart-container">
+        <table>
+            <caption>Men's T-Shirt Size Guide (Inches)</caption>
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest</th>
+                    <th>Waist</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>S</th>
+                    <td>36 - 38</td>
+                    <td>30 - 32</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <th>M</th>
+                    <td>39 - 41</td>
+                    <td>33 - 35</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <th>L</th>
+                    <td>42 - 44</td>
+                    <td>36 - 38</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th>XL</th>
+                    <td>45 - 47</td>
+                    <td>39 - 41</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <th>XXL</th>
+                    <td>48 - 50</td>
+                    <td>42 - 44</td>
+                    <td>31</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
